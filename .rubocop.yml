@@ -1,0 +1,51 @@
+require:
+  - rubocop-rails
+
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - 'node_modules/**/*'
+    - 'redis-stable/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+  TargetRubyVersion: 2.7
+
+# This sets us to use the standard Rails format instead of Rubocops
+# opinionated Ruby style.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# This sets us to use the standard Rails format instead of Rubocops
+# opinionated Ruby style.
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# Temporarily turn this off
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Lint/RescueException:
+  Enabled: false
+
+Lint/Debugger:
+  Enabled: true
+
+Style/NumericPredicate:
+  Enabled: false
+
+# This sets us to use the standard Rails format instead of Rubocops
+# opinionated Ruby style.
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+  EnforcedStyle: 'around'
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes

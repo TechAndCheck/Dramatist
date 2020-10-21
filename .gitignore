@@ -1,0 +1,15 @@
+# Ignore any environment variable files
+.env
+
+# Ignore Google credentials file
+googlecredentials.json
+
+# Ignore Mac stuff
+.DS_Store
+
+# Ignore some debug stuff
+.byebug_history
+
+# Ignore our tmp folder
+/tmp
+/temp
